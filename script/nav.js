@@ -44,10 +44,10 @@ function renderNavbar(activePage = "home") {
                     <a href="./about.html" class="${isActive("about")}">About</a>
                 </li>
                 <li>
-                    <a href="./gallery.html" class="${isActive("gallery")}">Gallery</a>
+                    <a href="./#gallery.html" class="${isActive("gallery")}">Gallery</a>
                 </li>
                 <li>
-                    <a href="./facilities.html" class="${isActive("facilities")}">Facilities</a>
+                    <a href="./#facilities.html" class="${isActive("facilities")}">Facilities</a>
                 </li>
                 <li>
                     <a href="./resources.html" class="${isActive("communication")}">Communication</a>
