@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #0c153c;
+    background-image: url(./img/bg/bg-03-free-img.png);
+}
+
+#nav-menu::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 10px;
+    bottom: 0;
+    left: 0;
+    background: url(./img/bg/bg-header-top.png) center center repeat-x;
+    z-index: 1;
+}
+
+#breadcrumb::after {
+    height: 19px;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    background: url(./img/bg/bg-header-bottom.png) center center repeat-x;
+}
+
+
+.bg-primary {
+    background-color: #0c153c;
+}
+
+.text-primary {
+    color: #0c153c;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.bg-light {
+    background-color: rgb(255, 245, 243) !important;
+}
+
+.bg-light:hover {
+    background-color: orange !important;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-us-img{
+    background-image: url('./img/bg/welcome-home.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    border-radius: 8px;
+    padding: 180px 0 180px 0;
+}
+
+.admission-img{
+    background-image: url('./img/bg/admission.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    border-radius: 8px;
+    padding: 180px 0 180px 0;
+}
+
+.school-ad{
+    background-color: #fefefe;
+    padding: 2px;
+}
