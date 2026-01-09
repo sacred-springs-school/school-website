@@ -104,7 +104,7 @@ body {
 .sv-spinner {
     width: 140px;
     height: 140px;
-    border-color: transparent #700117 #fff blue;
+    border-color: transparent  #0d153c #700117 #fff;
     /* border-color: transparent #ce2b37 #fff #009246; */
     border-style: solid;
     border-width: 4px;
