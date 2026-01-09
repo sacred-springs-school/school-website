@@ -75,3 +75,82 @@ body {
     background-color: #fefefe;
     padding: 2px;
 }
+
+/* LOADER SCRIPT */
+#sv-loader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    opacity: 1;
+    transition: opacity .1s ease-in-out;
+    pointer-events: all;
+    overflow: hidden;
+    touch-action:none
+}
+
+#sv-loader.fade-out {
+    opacity:0
+}
+
+.sv-spinner {
+    width: 140px;
+    height: 140px;
+    border-color: transparent #700117 #fff blue;
+    /* border-color: transparent #ce2b37 #fff #009246; */
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 50%;
+    animation:spin 1s linear infinite
+}
+
+.sv-loader-logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 1px 2px black);
+    -o-object-fit: contain;
+    object-fit: contain;
+    pointer-events: none;
+    opacity:0;
+    border-radius: 54%;
+}
+
+.sv-loader-logo.fadein {
+    animation:fadein .2s ease-in-out forwards
+}
+
+@keyframes spin {
+    0% {
+        transform:rotate(0deg)
+    }
+
+    to {
+        transform:rotate(1turn)
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform:translate(-50%, -50%) scale(.9)
+    }
+
+    to {
+        opacity: 1;
+        transform:translate(-50%, -50%) scale(1)
+    }
+}
+
+/* END OF LOADER SCRIPT */
