@@ -6,6 +6,6 @@ async function injectHTML(filePath, elemId) {
   document.getElementById(elemId).innerHTML = text;
 }
 
-document.getElementById("header-section").innerHTML = renderNavbar("about");
+document.getElementById("header-section").innerHTML = renderNavbar();
 // injectHTML('./modules/header.html', 'header-section');
 injectHTML('./modules/hero-section.html', 'hero-section');

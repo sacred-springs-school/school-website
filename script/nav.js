@@ -1,7 +1,8 @@
-function renderNavbar(activePage = "home") {
+function renderNavbar() {
+    const activePage = getActivePage()
     const isActive = (page) =>
         page === activePage
-            ? "block py-2 px-3 text-primary bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+            ? "block py-2 px-3 text-white bg-brand rounded bg-secondary md:text-fg-brand md:p-4"
             : "block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0";
 
     return `
@@ -37,22 +38,22 @@ function renderNavbar(activePage = "home") {
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-md bg-neutral-secondary-soft
                        md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
 
-                <li>
+                <li class="flex justify-center items-center">
                     <a href="./index.html" class="${isActive("home")}" aria-current="page">Home</a>
                 </li>
-                <li>
+                <li class="flex justify-center items-center">
                     <a href="./about.html" class="${isActive("about")}">About</a>
-                </li>
-                <li>
+                </li class="flex justify-center items-center">
+                <li class="flex justify-center items-center">
                     <a href="./#gallery.html" class="${isActive("gallery")}">Gallery</a>
                 </li>
-                <li>
+                <li class="flex justify-center items-center">
                     <a href="./#facilities.html" class="${isActive("facilities")}">Facilities</a>
                 </li>
-                <li>
+                <li class="flex justify-center items-center">
                     <a href="./resources.html" class="${isActive("communication")}">Communication</a>
                 </li>
-                <li>
+                <li class="flex justify-center items-center">
                     <a href="./contact.html" class="${isActive("contact")}">Contact us</a>
                 </li>
 
@@ -61,4 +62,20 @@ function renderNavbar(activePage = "home") {
     </div>
 </nav>
 `;
+}
+
+function getActivePage() {
+    const page = ((window.location.pathname).split('/'))[1]
+    switch (page) {
+        case "index.html":
+            return 'home'
+        case "contact.html":
+            return 'contact'
+        case "about.html":
+            return "about";
+        case "resources.html":
+            return "communication";
+        default:
+            return "home"
+    }
 }
