@@ -10,9 +10,12 @@ function renderNavbar() {
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://sacredspringsschool.com" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="./img/sacred-springs-school-logo.webp" class="h-10" alt="Sacred Springs Logo" />
-            <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">
-                Sacred Springs Schools
-            </span>
+            <div class="flex flex-col gap-0">
+                <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">
+                    Sacred Springs Schools
+                </span>
+                <small class="-mt-1">Unlocking the potential within</small>
+            </div>
         </a>
 
         <div class="inline-flex cursor-pointer md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
