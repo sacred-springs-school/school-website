@@ -48,7 +48,7 @@ function renderNavbar() {
                     <a href="./#gallery.html" class="${isActive("gallery")}">Gallery</a>
                 </li>
                 <li class="flex justify-center items-center">
-                    <a href="./#facilities.html" class="${isActive("facilities")}">Facilities</a>
+                    <a href="./enrollment.html" class="${isActive("enrollment")}">Enrollment</a>
                 </li>
                 <li class="flex justify-center items-center">
                     <a href="./resources.html" class="${isActive("communication")}">Communication</a>
@@ -75,6 +75,8 @@ function getActivePage() {
             return "about";
         case "resources.html":
             return "communication";
+        case "enrollment.html":
+            return "enrollment";
         default:
             return "home"
     }
